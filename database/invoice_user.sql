@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2021 at 05:25 PM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 7.3.29
+-- Generation Time: May 03, 2023 at 01:20 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,14 +35,14 @@ CREATE TABLE `invoice_user` (
   `last_name` varchar(100) NOT NULL,
   `mobile` bigint(20) NOT NULL,
   `address` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `invoice_user`
 --
 
 INSERT INTO `invoice_user` (`id`, `email`, `password`, `first_name`, `last_name`, `mobile`, `address`) VALUES
-(123456, 'admin@phpzag.com', '12345', 'Admin', '', 12345678912, 'New Delhi 110096 India.');
+(123456, 'ustek.rfid.solutions@gmail.com', '12345', 'Ustek-RFID', '', 905332026338, 'Turkiye-Tuzla');
 
 --
 -- Indexes for dumped tables

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2021 at 05:23 PM
--- Server version: 10.4.20-MariaDB
--- PHP Version: 7.3.29
+-- Generation Time: May 03, 2023 at 01:19 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,27 +30,20 @@ SET time_zone = "+00:00";
 CREATE TABLE `invoice_order_item` (
   `order_item_id` int(11) NOT NULL,
   `order_id` int(11) NOT NULL,
-  `item_code` varchar(250) NOT NULL,
-  `item_name` varchar(250) NOT NULL,
+  `item_code` varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `item_name` varchar(250) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `order_item_quantity` decimal(10,2) NOT NULL,
   `order_item_price` decimal(10,2) NOT NULL,
   `order_item_final_amount` decimal(10,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `invoice_order_item`
 --
 
 INSERT INTO `invoice_order_item` (`order_item_id`, `order_id`, `item_code`, `item_name`, `order_item_quantity`, `order_item_price`, `order_item_final_amount`) VALUES
-(4100, 2, '13555', 'Face Mask', '120.00', '2000.00', '240000.00'),
-(4101, 2, '34', 'mobile', '10.00', '10000.00', '100000.00'),
-(4102, 2, '34', 'mobile battery', '1.00', '34343.00', '34343.00'),
-(4103, 2, '34', 'mobile cover', '10.00', '200.00', '2000.00'),
-(4104, 2, '36', 'testing', '1.00', '2400.00', '2400.00'),
-(4364, 682, '123456', 'iphone 6s', '12.00', '25000.00', '300000.00'),
-(4365, 682, '345678', 'one plus', '10.00', '45000.00', '450000.00'),
-(4368, 683, '00123', 'iphone 12', '10.00', '80000.00', '800000.00'),
-(4369, 683, '00124', 'iphone 8', '13.00', '40000.00', '520000.00');
+(4424, 702, 'qwe', 'asdasd', '22.00', '22.00', '484.00'),
+(4426, 696, 'phone', 'asd asd asd asdasd', '22.00', '23.00', '506.00');
 
 --
 -- Indexes for dumped tables
@@ -70,7 +63,7 @@ ALTER TABLE `invoice_order_item`
 -- AUTO_INCREMENT for table `invoice_order_item`
 --
 ALTER TABLE `invoice_order_item`
-  MODIFY `order_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4370;
+  MODIFY `order_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4427;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
