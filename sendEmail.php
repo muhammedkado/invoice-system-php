@@ -21,10 +21,11 @@ $mail->SMTPSecure='ssl';
 $mail->Port=465;
 $mail->Host='smtp.gmail.com';
 
-$mail->Username='eng.muhammedkado@gmail.com';
-$mail->Password='eqtinyxvmckejgyh';
+// SMTP credentials come from environment variables (never commit real credentials)
+$mail->Username=getenv('SMTP_USERNAME') ?: 'your-email@gmail.com';
+$mail->Password=getenv('SMTP_PASSWORD') ?: 'your-app-password';
 
-$mail->setFrom(address:'eng.muhammedkado@gmail.com', name:'muhammed kado');// This is the email we will send through
+$mail->setFrom(address:$mail->Username, name:'muhammed kado');// This is the email we will send through
 $mail->addAddress(address:$invoiceValues['email'],name:'Ms.'.$invoiceValues['order_receiver_name']); //Here it will be sent to the email that was entered when creating the invoice 
 
 $mail->isHTML(true);

@@ -70,11 +70,12 @@ class Invoice{
 				order_amount_paid,
 				order_total_amount_due,
 				customer_note,
+				payment_information,
 				billing_Date,
 			    due_date,
 				email,
 				status
-				   ) 
+				   )
 			VALUES (
 			'$userID',
 			 '$orderReceiverName',
@@ -86,6 +87,7 @@ class Invoice{
 			 '$amountPaid',
 			 '$orderAmountPaid',
 			 '$notes',
+			 '',
 			 '$billing_Date',
 			 '$due_Date',
 			 '$email',
